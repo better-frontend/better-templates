@@ -2,7 +2,7 @@ export default function render (template) {
 	//Accepts a string with the following format:
 	//Starts with a tagname (\w+)
 	//followed by 1 or 0 #id (#\w+)
-	//followed by 1 or more .class (\.\w+)
+	//followed by 0 or more .class (\.\w+)
 	//followed by 1 or 0 [...]
 	//	where ... = 1 or more attribute(=value)?
 	//	where every match is separated by a comma and 0 or more spaces
