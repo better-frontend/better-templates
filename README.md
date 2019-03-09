@@ -17,7 +17,7 @@ render(`
     > p.child1 "This is a child"
       > p.child2 "This is a child's child."`);
 ```
-Returns
+Returns (as `HTMLElement`)
 ```html
 <div id="test" class="container">
   This is a test
