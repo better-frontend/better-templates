@@ -23,7 +23,10 @@ export default function render (template) {
 		const element = document.createElement(tagname);
 
 		if (id) element.id = id.substring(1);
-		if (classlist) element.classList.add(...classlist.split(/\./).filter(token => token !== ""));
+		if (classlist) element.classList
+			.add(...classlist
+				.split(/\./)
+				.filter(token => token !== ""));
 		if (attributes) attributes
 			.slice(1, -1)
 			.split(/,\s*/)
