@@ -1,4 +1,24 @@
 # Mini template
+
+## Getting started
+Clone the repo
+```shell
+npm i github:maanlamp/mini-template
+```
+### es6
+to use it as an es6 module, just `import` it:
+```js
+import { render, html } from "mini-template/index.js";
+```
+
+### node
+To use it as a commonjs/node module, just `import` it from je `.mjs` file:
+```js
+import { render, html } from "mini-template/index.mjs";
+```
+And make sure you use the `--experimental-modules` flag when running it in node.
+
+## How it works
 Render simple html with a pug/marko-like syntax.
 
 ```js
