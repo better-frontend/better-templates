@@ -1,32 +1,60 @@
 # Mini template
-Accepts a string with the following format:
-- Starts with a tagname (`/\w+/`)
-- followed by 1 or 0 #id (`/#\w+/`)
-- followed by 0 or more .class (`/\.\w+/`)
-- followed by 1 or 0 `/\[...\]/`
-	- where `...` = 1 or more `/\w+(?:\s*=\s*\.+)?/`
-	- where every match is separated by a comma and 0 or more spaces
-- followed by 1 or 0 `/"[^"]*"/`
-  - followed by 1 or more `/>/` `...`
-  - where `...` = the entire pattern as described above.
+Render simple html with a pug/marko-like syntax.
 
-## Example
 ```js
+render`
+  html[lang=en]
+    head
+      meta[charset=UTF-8]
+      title "Document"
+    body
+      h1 "Hello World!"
+`;
+//Or
 render(`
-  div#test.container "This is a test"
-    > p.child1 "This is a child"
-      > p.child2 "This is a child's child."`);
-```
-Returns (as `HTMLElement`)
-```html
-<div id="test" class="container">
-  This is a test
-  <p class="child1">
-    This is a child
-    <p class="child2">This is a child's child.</p>
-  </p>
-</div>
+  html[lang=en]
+    head
+      meta[charset=UTF-8]
+      title "Document"
+    body
+      h1 "Hello World!"
+`);
 ```
 
-## Logic
-The is no logic (yet?). You will have to write loops that call `render` a lot of times.
+Will result in:
+
+```html
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+  </body>
+</html>
+```
+
+You can also transpile the simple-template to an HTML-string:
+
+```js
+html`
+  html[lang=en]
+    head
+      meta[charset=UTF-8]
+      title "Document"
+    body
+      h1 "Hello World!"
+`;
+// > "<html lang=\"en\"><head><meta charset="UTF-8"><title>Document</title></head><body><h1>Hello World!</h1></body></html>";
+//Or
+html(`
+  html[lang=en]
+    head
+      meta[charset=UTF-8]
+      title "Document"
+    body
+      h1 "Hello World!"
+`);
+// > "<html lang=\"en\"><head><meta charset="UTF-8"><title>Document</title></head><body><h1>Hello World!</h1></body></html>";
+```
