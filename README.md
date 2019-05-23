@@ -3,18 +3,18 @@
 ## Getting started
 Clone the repo
 ```shell
-npm i github:maanlamp/mini-template
+npm i github:maanlamp/better-templates
 ```
 ### es6
 to use it as an es6 module, just `import` it:
 ```js
-import { render, html } from "mini-template/index.js";
+import { render, html } from "better-templates/index.js";
 ```
 
 ### node
 To use it as a commonjs/node module, just `import` it from je `.mjs` file:
 ```js
-import { render, html } from "mini-template/index.mjs";
+import { render, html } from "better-templates/index.mjs";
 ```
 And make sure you use the `--experimental-modules` flag when running it in node.
 
