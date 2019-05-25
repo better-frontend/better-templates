@@ -1,5 +1,5 @@
 {
-  "name": "mini-template",
+  "name": "better-templates",
   "version": "1.0.0",
   "description": "Render simple HTML with this small package",
   "main": "index.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maanlamp/mini-template.git"
+    "url": "git+https://github.com/maanlamp/better-templates.git"
   },
   "author": "maanlamp",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/maanlamp/mini-template/issues"
+    "url": "https://github.com/maanlamp/better-templates/issues"
   },
-  "homepage": "https://github.com/maanlamp/mini-template#readme"
+  "homepage": "https://github.com/maanlamp/better-templates#readme"
 }

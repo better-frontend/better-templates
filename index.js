@@ -1,6 +1,8 @@
 "use strict";
 "hide implementation";
 
+//TODO: allow emmet-like operators like section*3 or main>section>a
+
 export function render (...args) {
 	if (argumentWasTemplateLiteral(args[0]))
 		return renderTemplateLiteral(args[0], args.slice(1));
