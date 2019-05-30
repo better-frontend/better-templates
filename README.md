@@ -1,4 +1,4 @@
-# Mini template
+# better-templates
 
 ## Getting started
 Clone the repo
